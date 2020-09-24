@@ -1,9 +1,5 @@
-FROM openjdk:8
+FROM openjdk:8-jdk-alpine
 VOLUME /tmp
-
-EXPOSE 8800
-
 ADD target/cicdproject.jar cicdproject.jar
 RUN echo Docker image creation is in progress
-
 ENTRYPOINT ["java", "-jar", "cicdproject.jar"]
